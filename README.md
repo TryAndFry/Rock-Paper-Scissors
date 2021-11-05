@@ -1,0 +1,1 @@
+This is a small script project to allow a user to play "Rock-Paper-Scissors" with the computer

@@ -1,28 +1,3 @@
-
-/*
-function FizzBuzz(number){
-    if(number<=0) return -1;
-    for(let i=1;i<=number;i++){
-        if(i%3==0 && i%5==0){
-            console.log("FizzBuzz");
-            continue;
-        }
-        if(i%3==0){
-            console.log("Fizz");
-            continue;
-        }
-        if(i%5==0){
-            console.log("Buzz");
-            continue;
-        }
-        console.log(i);
-    }
-}
-let n=parseInt(prompt("Please enter a positive integer"))
-FizzBuzz(n)
-
-*/
-
 function computerPlay(){
     let selection=Math.floor(Math.random()*3);
     if(selection==0) return "rock";

@@ -7,9 +7,144 @@
     <title>Rock Paper Scissors!</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <h1>Let's Play a Game</h1>
+    <div class='game'>
+        <h3>Please Select a Difficulty:</h3>
+        <div class='difficulty'>
+            <button class='difficulty-setting selected' value='1'>Easy</button>
+            <button class='difficulty-setting' value='2'>Moderate</button>
+            <button class='difficulty-setting' value ='3'>Impossible</button>
+        </div>
+        <div class='buttons'>
+            <button class="game-button" id='rock'>
+                <img src='images/alpine-landscape-rock-rubble-01g-al1.svg' />
+            </button>
+            <button class="game-button" id='paper'>
+                <img src='images/paper.svg' />
+            </button>
+            <button class="game-button" id='scissors'>
+                <img src='images/scissors.svg' />
+            </button>
+        </div>
+
+    </div>
+    <h3 class='result'>Game Results:</h3>
+    <h2 class='game-record'>Wins: 0 Losses: 0</h2>
+
+
 </body>
 </html>
 <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Righteous&display=swap');
+
+    html{
+        background-image:linear-gradient(to bottom right, aquamarine,#725099);
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        padding:0;
+        margin: 0;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 4rem;
+        line-height: 1;
+        margin-bottom: 0;
+        position: relative;
+        color: #443a5a;
+        font-family: 'Press Start 2P', cursive;
+    }
+    h2{
+        text-align: center;
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 0;
+        position: relative;
+        color: #443a5a;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    h3{
+        text-align: center;
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 0;
+        position: relative;
+        color: #302941;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+
+    .game{
+        display: flex;
+        flex-direction: column;
+    }
     
+    .buttons{
+        margin: auto;
+        display: flex;
+        background-color: transparent;
+    }
+
+    .game-button{
+        transition: all 0.3s;
+        background-image:linear-gradient(to top left, rgb(8 124 143 / 60%),#743618ba);
+        margin: 4rem;
+        height: 300px;
+        width: 250px;
+        flex: 1;
+        border-color: #523a95;
+        border-radius: 3%;
+        
+        background-color: transparent;
+    }
+
+    .game-button:hover{
+        transform: scale(1.1);
+        box-shadow: 3px 3px #523a95;
+        border-width: 3px;
+        border-color: #17032e;
+    }
+
+    .difficulty{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .difficulty-setting{
+        font-family: 'Press Start 2P', cursive;
+        height: 50px;
+        width: 200px;
+        margin: 3rem;
+        background-color: #FFFFFF;
+    }
+    .difficulty-setting:hover{
+        background-color: #b9b5b5bd;
+    }
+
+    .selected{
+        background-color: #b9b5b5bd;
+    }
+
+    .computer-selection{
+        border-color: red;
+        transform: scale(1.2);
+    }
+
+    .result{
+        margin: 0;
+        padding: 0;
+    }
+
 </style>
+
+<script src="script.js" defer></script>
